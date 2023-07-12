@@ -1,5 +1,6 @@
 package com.example.projectcalculadora
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
@@ -9,6 +10,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity() {
+    @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -36,7 +38,7 @@ class MainActivity : AppCompatActivity() {
             val numero1 = num1.toDouble()
             val numero2 = num2.toDouble()
             val sumar = numero1 + numero2
-            resultado.text = "Resultado $sumar"
+            resultado.text = "Resultado $sumar" //resultado.text = "Resultado $sumar"
             Toast.makeText(baseContext, "Se realizó una Suma ", Toast.LENGTH_LONG).show()
         })
         botonRestar.setOnClickListener(View.OnClickListener {
