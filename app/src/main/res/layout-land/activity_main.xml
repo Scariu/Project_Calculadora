@@ -11,18 +11,16 @@
         android:id="@+id/buttonSalir"
         android:layout_width="wrap_content"
         android:layout_height="50dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
         android:text="SALIR"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.962"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonDividir"
-        app:layout_constraintVertical_bias="0.703" />
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="356dp"
-        android:layout_height="65dp"
+        android:layout_width="293dp"
+        android:layout_height="36dp"
         android:layout_margin="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -41,7 +39,6 @@
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/imagen1"
-        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="@+id/imagen1"
         app:layout_constraintTop_toBottomOf="@+id/imagen1"
         app:layout_constraintVertical_bias="0.541" />
@@ -50,12 +47,16 @@
         android:id="@+id/editTextNumero1"
         android:layout_width="100dp"
         android:layout_height="50dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="32dp"
         android:ems="10"
         android:hint="Número 1"
         android:inputType="numberDecimal"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.138"
+        app:layout_constraintEnd_toStartOf="@+id/editTextNumero2"
+        app:layout_constraintHorizontal_bias="0.333"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imagen1"
         app:layout_constraintVertical_bias="0.0" />
@@ -64,52 +65,48 @@
         android:id="@+id/editTextNumero2"
         android:layout_width="100dp"
         android:layout_height="50dp"
+        android:layout_marginEnd="32dp"
         android:ems="10"
         android:hint="Número 2"
         android:inputType="numberDecimal"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/editTextNumero1"
         app:layout_constraintEnd_toEndOf="@+id/imagen1"
-        app:layout_constraintHorizontal_bias="0.798"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imagen1"
+        app:layout_constraintTop_toTopOf="@+id/editTextNumero1"
         app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/buttonSumar"
-        android:layout_width="297dp"
+        android:layout_width="250dp"
         android:layout_height="50dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="32dp"
         android:backgroundTint="#8BC34A"
         android:text="Sumar ( + )"
         android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.833"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.192" />
+        app:layout_constraintHorizontal_bias="0.449"
+        app:layout_constraintStart_toEndOf="@+id/imagen1"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <Button
         android:id="@+id/buttonMultiplicar"
         android:layout_width="0dp"
         android:layout_height="50dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="8dp"
         android:backgroundTint="#FFC107"
         android:text="Multiplicar ( x )"
         android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/buttonSumar"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/buttonSumar"
-        app:layout_constraintTop_toBottomOf="@+id/buttonRestar"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/buttonRestar" />
 
     <Button
         android:id="@+id/buttonDividir"
         android:layout_width="0dp"
         android:layout_height="50dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="64dp"
         android:backgroundTint="#E42929"
         android:text="Dividir ( / )"
         android:textSize="20sp"
@@ -124,53 +121,44 @@
         android:id="@+id/buttonRestar"
         android:layout_width="0dp"
         android:layout_height="50dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="8dp"
         android:backgroundTint="#03A9F4"
         android:text="Restar ( - )"
         android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/buttonSumar"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/buttonSumar"
-        app:layout_constraintTop_toBottomOf="@+id/buttonSumar"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/buttonSumar" />
 
     <TextView
         android:id="@+id/developed"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="8dp"
         android:text="Developed by Florencia Hidalgo"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonDividir"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
         android:id="@+id/imagen1"
-        android:layout_width="347dp"
-        android:layout_height="170dp"
+        android:layout_width="274dp"
+        android:layout_height="123dp"
+        android:layout_marginStart="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.106"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.352"
+        app:layout_constraintVertical_bias="0.229"
         app:srcCompat="@drawable/baseline_calculate_24" />
 
     <ImageView
         android:id="@+id/imagen2"
         android:layout_width="49dp"
         android:layout_height="37dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.018"
         app:srcCompat="@drawable/baseline_filter_vintage_24" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
